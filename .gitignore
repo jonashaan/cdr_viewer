@@ -1,0 +1,6 @@
+venv
+.mypy_cache
+build
+dist
+*.spec
+.idea

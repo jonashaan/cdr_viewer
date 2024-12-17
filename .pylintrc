@@ -1,0 +1,31 @@
+[MASTER]
+# ignore migrations folders
+ignore=migrations
+# ignore-patterns=\d{4}_.*?.py
+cache-size=500
+
+[MESSAGES CONTROL]
+# C0111 Missing docstring
+# C0114 Missing module docstring
+# I0011 Warning locally suppressed using disable-msg
+# I0012 Warning locally suppressed using disable-msg
+# W0704 Except doesn't do anything Used when an except clause does nothing but "pass" and there is no "else" clause
+# W0142 Used * or * magic* Used when a function or method is called using *args or **kwargs to dispatch arguments.
+# W0212 Access to a protected member %s of a client class
+# W0232 Class has no __init__ method Used when a class has no __init__ method, neither its parent classes.
+# W0613 Unused argument %r Used when a function or method argument is not used.
+# W0702 No exception's type specified Used when an except clause doesn't specify exceptions type to catch.
+# R0201 Method could be a function
+# C1001 Used when a class is defined that does not inherit from anotherclass and does not inherit explicitly from “object”.
+# C0103 Invalid module name
+# R0901 Used when class has too many parent classes, try to reduce this to get a simpler (and so easier to use) class.
+disable=C0114,R0903
+
+[REPORTS]
+msg-template={path}:{line}: [{msg_id}({symbol}), {obj}] {msg}
+include-ids=yes
+
+[TYPECHECK]
+# List of classes names for which member attributes should not be checked
+# (useful for classes with attributes dynamically set).
+ignored-classes=SQLObject,WSGIRequest
